@@ -4,7 +4,7 @@
  * All Rights Reserved. 
  *
  * http://highfidelity.io
- */
+ */                              
 
 class ForgotController extends Controller {
     public function run () {
