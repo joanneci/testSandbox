@@ -48,7 +48,7 @@ class ForgotController extends Controller {
         //hmmm 
 	//no gs                 
         $this->write('msg', $msg);                                 
-        parent::run();
+        parent::run(); //jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
         	//new line tabbed                                                    
         
         	//tried some changes in the config file
