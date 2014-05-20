@@ -28,7 +28,8 @@ class ForgotController extends Controller {
             }
         }
         $this->write('msg', $msg);                              
-        parent::run();                                                    
+        parent::run();
+        	//new line tabbed                                                    
         
         	//tried some changes in the config file
     }
