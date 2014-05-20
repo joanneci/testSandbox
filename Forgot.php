@@ -16,6 +16,8 @@ class ForgotController extends Controller {
 	//this is a new tab
     //4spaces
 	//tab	
+    
+	//newtab
       
     
     
