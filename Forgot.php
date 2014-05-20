@@ -49,7 +49,8 @@ class ForgotController extends Controller {
 //j
 //m
 //try this  
-//y                               
+//y
+	//x                               
         } 
         //hmmm 
 	//no gs                 
