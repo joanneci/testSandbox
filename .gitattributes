@@ -19,7 +19,7 @@ tmp/* -lf
 uploads/* -lf
 
 #convert tabs to 4 spaces   
-* filter=tabspace
+*.* filter=tabspace
 #Do Not convert tabs on 3rd party code
 js/bootstrap/* -tabspace
 js/jquery/* -tabspace
@@ -33,7 +33,7 @@ tmp/* -tabspace
 uploads/* -tabspace
 
 #remove trailing whitespaces
-* filter=trimWhitespace
+*.* filter=trimWhitespace
 #Do Not convert tabs on 3rd party code
 js/bootstrap/* -trimWhitespace
 js/jquery/* -trimWhitespace
