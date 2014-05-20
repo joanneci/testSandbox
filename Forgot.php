@@ -26,7 +26,7 @@ class ForgotController extends Controller {
     
     	//this is a tab
     //this has trailing whitespaces             
-//this is a very long line kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk lllllllllllllllllllllllllllllllllllllllllllllllll bbbbbbbbbbbbbbbbbbbbbbbbbbbbb 
+//this is a very long line kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk lllllllllllllllllllllllllllllllllllllllllllllllll bbbbbbbbbbbbbbbbbbbbbbbbbbbbb       
         extract($_REQUEST);
 
         $msg = '';                          
