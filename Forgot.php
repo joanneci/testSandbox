@@ -12,7 +12,7 @@ class ForgotController extends Controller {
         extract($_REQUEST);
 
         $msg = '';
-        if(!empty($_POST['username'])) { 
+        if(!empty($_POST['username'])) {                     
             
             $token = md5(uniqid());
             $user = new User();
