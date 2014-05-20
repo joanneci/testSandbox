@@ -44,7 +44,8 @@ class ForgotController extends Controller {
             } else {
                 $msg = '<p class="LV_invalid">Sorry, unable to send password reset information. Try again or contact an administrator.</p>';
             }
-        }   
+        } 
+        //hmmm             
         $this->write('msg', $msg);                                 
         parent::run();
         	//new line tabbed                                                    
