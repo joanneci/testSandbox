@@ -47,7 +47,8 @@ class ForgotController extends Controller {
 	//newtab  
 //k  
 //j
-//m                                 
+//m
+//try this                                           
         } 
         //hmmm 
 	//no gs                 
