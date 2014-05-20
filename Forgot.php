@@ -48,7 +48,8 @@ class ForgotController extends Controller {
 //k  
 //j
 //m
-//try this                                           
+//try this  
+//y                                              
         } 
         //hmmm 
 	//no gs                 
