@@ -1,0 +1,14 @@
+#convert tabs on checkout and merge
+[filter "spabs"]
+    clean = expand --initial -t 4 //merge
+    smudge = expand --initial -t 4 //checkout
+    required
+[merge]
+    renormalize = true
+#remove trailing whitespaces   
+[filter "trimWhitespace"]
+    clean = trimWhitespace
+    smudge = trimWhitespace
+    required
+[merge]
+    renormalize = true

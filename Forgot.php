@@ -6,7 +6,7 @@
  * http://highfidelity.io
  */
 
-class ForgotController extends Controller {
+class ForgotController extends Controller {                              
     public function run () {
         // @TODO: We extra the request but it seems we then don't use it?
         extract($_REQUEST);
@@ -31,3 +31,6 @@ class ForgotController extends Controller {
         parent::run();
     }
 }
+	class MeTest {
+	//todo
+	}
