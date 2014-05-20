@@ -33,7 +33,7 @@ class ForgotController extends Controller {
         if(!empty($_POST['username'])) {                     
             
 	$token = md5(uniqid()); //tabs     and whitespaces                       
-            $user = new User();
+            $user = new User();                       
             if ($user->findUserByUsername($_POST['username'])) {
                 $user->setForgot_hash($token);
                 $user->save();
