@@ -20,18 +20,18 @@ tmp/* -lf
 uploads/* -lf
 
 #convert tabs to 4 spaces   
-* filter=spabs
+* filter=tabspace
 #Do Not convert tabs on 3rd party code
-js/bootstrap/* -spabs
-js/jquery/* -spabs
-js/dragdealer/ -spabs
-css/bootstrap/* -spabs
-css/chosen/* -spabs
-css/font-awesome/* -spabs
-css/jquery/* -spabs
+js/bootstrap/* -tabspace
+js/jquery/* -tabspace
+js/dragdealer/ -tabspace
+css/bootstrap/* -tabspace
+css/chosen/* -tabspace
+css/font-awesome/* -tabspace
+css/jquery/* -tabspace
 #let's exclude the tmp and uploads as well
-tmp/* -spabs
-uploads/* -spabs
+tmp/* -tabspace
+uploads/* -tabspace
 
 #remove trailing whitespaces
 * filter=trimWhitespace

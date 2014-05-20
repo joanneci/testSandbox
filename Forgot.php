@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * Copyright (c) 2014, High Fidelity Inc.
  * All Rights Reserved. 
@@ -6,15 +6,15 @@
  * http://highfidelity.io
  */
 
-class ForgotController extends Controller {                              
+class ForgotController extends Controller {
     public function run () {
         // @TODO: We extra the request but it seems we then don't use it?
         extract($_REQUEST);
 
-		$msg = '';
-		if(!empty($_POST['username'])) { 
+        $msg = '';
+        if(!empty($_POST['username'])) { 
             
-					$token = md5(uniqid());
+            $token = md5(uniqid());
             $user = new User();
             if ($user->findUserByUsername($_POST['username'])) {
                 $user->setForgot_hash($token);
@@ -27,12 +27,9 @@ class ForgotController extends Controller {
                 $msg = '<p class="LV_invalid">Sorry, unable to send password reset information. Try again or contact an administrator.</p>';
             }
         }
-        $this->write('msg', $msg);    
+        $this->write('msg', $msg);                              
         parent::run();
+        
+        	//tried some changes in the config file
     }
 }
-	class MeTest {
-	//todo
-	// this is a new commit           
-			//hi! 1234
-	}
