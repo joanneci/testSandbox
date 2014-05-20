@@ -33,4 +33,6 @@ class ForgotController extends Controller {
 }
 	class MeTest {
 	//todo
+	// this is a new commit           
+			//hi!
 	}
