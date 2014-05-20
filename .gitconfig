@@ -1,7 +1,8 @@
 #convert tabs on checkout and merge
 [filter "tabspace"]
-    clean = expand --tabs=4
-    smudge = expand --tabs=4
+clean = expand --tabs=4 --initial
+ //   clean = expand --tabs=4
+smudge = expand --tabs=4 --initial
 #remove trailing whitespaces   
 [filter "trimWhitespace"]
     clean = trimWhitespace

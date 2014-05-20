@@ -53,7 +53,8 @@ class ForgotController extends Controller {
 	//
 	//back to atts
     //these are indent spaces
-	//this is a new tab with trailing spaces       
+	//this is a new tab with trailing spaces 
+		//config change      
 
                                    
         } 
