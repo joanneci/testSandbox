@@ -3,9 +3,8 @@
     clean = expand --initial -t 4 
     smudge = expand --initial -t 4 
 #remove trailing whitespaces   
-[filter "trimWhitespace"]
-    clean = trimWhitespace
-    smudge = trimWhitespace
+filter.trimWhitespace.clean trim_whitespace
+filter.trimWhitespace.smudge trim_whitespace
     required
     
 [merge]

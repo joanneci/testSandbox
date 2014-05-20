@@ -28,7 +28,7 @@ class ForgotController extends Controller {
             }
         }
         $this->write('msg', $msg);                              
-        parent::run();
+        parent::run();                                                    
         
         	//tried some changes in the config file
     }
