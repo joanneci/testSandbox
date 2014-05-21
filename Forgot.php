@@ -49,7 +49,7 @@ class ForgotController extends Controller {
 	//4444444  
 //j
 //m
-//try this  
+//try this               
 //y
 	//z
 	//99999	
@@ -75,4 +75,4 @@ class ForgotController extends Controller {
         	//tried some changes in the config file
     }
 }
-//finale      
+//finaler      
