@@ -13,7 +13,7 @@
 
 (function($){ 
     jQuery.fn.extend({  
-        autogrow: function() {
+        autogrow: function() {   
         
             //  We will create a div clone of the textarea
             //  by copying these attributes from the textarea to the div.
