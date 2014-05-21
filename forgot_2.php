@@ -36,8 +36,8 @@ class ForgotController extends Controller {
             
     $token = md5(uniqid()); //tabs     and whitespaces                       
             $user = new User();                       
-            if ($user->findUserByUsername($_POST['username'])) {
-                $user->setForgot_hash($token);
+                if ($user->findUserByUsername($_POST['username'])) {
+                $user->setForgot_hash($token);   
                 $user->save();
                 $resetUrl = SECURE_SERVER_URL . 'resetpass?un=' . base64_encode($_POST['username']) . '&amp;token=' . $token;    
                 $resetUrl = '<a href="' . $resetUrl . '" title="Password Recovery">' . $resetUrl . '</a>';
