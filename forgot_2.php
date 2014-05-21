@@ -17,7 +17,7 @@ class ForgotController extends Controller {
     //4spaces
 	//tab	
     
-	//newtab                                      
+	//newtab                                                             
 	//newnew                           
 	//hi                      
     //new new ew test     
