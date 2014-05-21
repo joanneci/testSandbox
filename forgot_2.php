@@ -8,7 +8,7 @@
 
 class ForgotController extends Controller {   
     public function run () {
-        // @TODO: We extra the request but it seems we then don't use it?                              
+        // @TODO: We extra the request but it seems we then don't use it?                                         
       //trailing above  
 		//2tabs
 	//1tab                      
