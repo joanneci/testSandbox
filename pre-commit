@@ -17,24 +17,15 @@ else
 exec git diff-index --check --cached $against --
 
 # Detect too long lines in .php and .html files:
-changed_source_files=`git diff-index --cached $against --numstat |
-cut -f3 |
-egrep '\.[php][html]$'`
- 
-if [[ -n "$changed_source_files" ]]; then
-found_offenses=''
- 
-for file in $changed_source_files ; do
-too_long=`git diff-index --cached -p $against -- ${file} |
-egrep '^\+.{121,}' | sed -E 's/^\+//'`
-if [[ -n "$too_long" ]]; then
-found_offenses=YES
-printf "\n$file:\n%s\n" "$too_long" >&2
-fi
-done
- 
-if [[ -n $found_offenses ]]; then
-echo "\nAborting commit because you added lines longer than 116 chars." >&2
-exit 1
-fi
-fi
+check_line_lengths() {
+  # Enforce maximum line length to 80 characters
+  too_long=$(git diff-index --cached -p $against -- ${file} |
+           egrep '^\+.{121,}' | sed -E 's/^\+//')
+  test -z "$too_long" || echo "The line:
+------------------------------------------------------------------------------
+  '$too_long'
+------------------------------------------------------------------------------
+  in file '$file' is longer than 160 characters.
+  It is required to have no more than 80 characters per line.
+"
+}
