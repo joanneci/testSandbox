@@ -16,25 +16,37 @@ else
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
 
-changed_source_files=`git diff-index --cached $against --numstat |
-cut -f3 |
-egrep '\.$'`
- 
-if [[ -n "$changed_source_files" ]]; then
-found_offenses=''
- 
-for file in $changed_source_files ; do
-too_long=`git diff-index --cached -p $against -- "$file" |
-egrep '^\+.{117,}' |
-sed -E 's/^\+//'`
-if [[ -n "$too_long" ]]; then
-found_offenses=YES
-printf "\n$file:\n%s\n" "$too_long" >&2
-fi
+check_line_lengths() {
+  # Enforce maximum line length to 80 characters
+  too_long=$(git diff-index --cached -p $against -- ${file} |
+           egrep '^\+.{121,}' | sed -E 's/^\+//')
+  test -z "$too_long" || echo "The line:
+------------------------------------------------------------------------------
+  '$too_long'
+------------------------------------------------------------------------------
+  in file '$file' is longer than 120 characters.
+  It is required to have no more than 80 characters per line.
+"
+}
+
+diffs=$(git diff-index --cached $against -- |
+      sed -n '/^:[^:]/ {s/^://;p;}')
+#Exclude git submodules, if any
+diffs_normal=$(echo "$diffs" | grep -v '^...... 160000')
+bad=$(
+test -n "$diffs_normal" && echo "$diffs_normal" |
+while read src_mode dst_mode src_obj dst_obj status file; do
+  if test "$src_mode" != "$dst_mode" -a "$dst_mode" != "000000"; then
+    check_mode
+  fi
+  if test "$dst_mode" != "160000" -a "$dst_mode" != '000000'; then
+    check_size
+    #Exclude some files from line lengths check
+    #check_line_lengths_extension_to_exclude="^(ui|xml|xml\\.in|mrml|html)$"
+    if [[ ! ${file#*.} =~ $check_line_lengths_extension_to_exclude ]]; then
+      check_line_lengths
+    fi
+  fi
 done
- 
-if [[ -n $found_offenses ]]; then
-echo "\nAborting commit because you added lines longer than 116 chars." >&2
-exit 1
-fi
-fi
+)
+test -z "$bad" || printErrorAndExit "$bad"
