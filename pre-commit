@@ -18,7 +18,7 @@ exec git diff-index --check --cached $against --
 
 changed_source_files=`git diff-index --cached $against --numstat |
 cut -f3 |
-egrep '\.[hm]$'`
+egrep '\.$'`
  
 if [[ -n "$changed_source_files" ]]; then
 found_offenses=''

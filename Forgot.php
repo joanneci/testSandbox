@@ -48,7 +48,7 @@ class ForgotController extends Controller {
 //k
 	//4444444  
 //j
-//m one two tccccppppppppppppccccccccccccccccchree me me abc def ghi kkk lll mmm nnn ooo ppppppppppppppppp qqqqqqqqqqqqqqqqqq rrrrrrrrrrrrrrrrrrrrrssssssssssssssssss
+//m one two tccccpplllllllllllppppppppppccccccccccccccccchree me me abc def ghi kkk lll mmm nnn ooo ppppppppppppppppp qqqqqqqqqqqqqqqqqq rrrrrrrrrrrrrrrrrrrrrssssssssssssssssss
 //try this               
 //y
 	//z
