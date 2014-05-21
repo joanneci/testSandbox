@@ -9,7 +9,7 @@
 #never replace line endings on 3rd party code
 js/bootstrap/* -lf
 js/jquery/* -lf
-js/dragdealer/ -lf
+js/dragdealer/* -lf
 css/bootstrap/* -lf
 css/chosen/* -lf
 css/font-awesome/* -lf
@@ -19,11 +19,13 @@ tmp/* -lf
 uploads/* -lf
 
 #convert tabs to 4 spaces   
-filter=tabspace
+*.php filter=tabspace
+*.html filter=tabspace
+*.mustache filter=tabspace
 #Do Not convert tabs on 3rd party code
 js/bootstrap/* -tabspace
 js/jquery/* -tabspace
-js/dragdealer/ -tabspace
+js/dragdealer/* -tabspace
 css/bootstrap/* -tabspace
 css/chosen/* -tabspace
 css/font-awesome/* -tabspace
@@ -33,17 +35,17 @@ tmp/* -tabspace
 uploads/* -tabspace
 
 #remove trailing whitespaces
-filter=trimWhitespace
+#/* filter=trimWhitespace
 #Do Not convert tabs on 3rd party code
-js/bootstrap/* -trimWhitespace
-js/jquery/* -trimWhitespace
-js/dragdealer/ -trimWhitespace
-css/bootstrap/* -trimWhitespace
-css/chosen/* -trimWhitespace
-css/font-awesome/* -trimWhitespace
-css/jquery/* -trimWhitespace
+#js/bootstrap/* -trimWhitespace
+#js/jquery/* -trimWhitespace
+#js/dragdealer/* -trimWhitespace
+#css/bootstrap/* -trimWhitespace
+#css/chosen/* -trimWhitespace
+#css/font-awesome/* -trimWhitespace
+#css/jquery/* -trimWhitespace
 #let's exclude the tmp and uploads as well
-tmp/* -trimWhitespace
-uploads/* -trimWhitespace
+#tmp/* -trimWhitespace
+#uploads/* -trimWhitespace
 
 
