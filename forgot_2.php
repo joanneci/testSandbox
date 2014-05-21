@@ -5,7 +5,8 @@
  *
  * http://highfidelity.io
  */                              
-
+	//hello world!
+	//hello again!        
 class ForgotController extends Controller {   
     public function run () {
         // @TODO: We extra the request but it seems we then don't use it?                                         
@@ -21,11 +22,11 @@ class ForgotController extends Controller {
 	//newnew                           
 	//hi                      
     //new new ew test     
+	//after copy         
     
-    
-	// iiiii          
-    	//this is a tab
-    //this has trailing whitespaces             
+			// iiiii          
+    	//this is a tab           
+    //this has trailing whitespaces                   
 //this is a very long line kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk lllllllllllllllllllllllllllllllllllllllllllllllll bbbbbbbbbbbbbbbbbbbbbbbbbbbbb       
         extract($_REQUEST);
 
