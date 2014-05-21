@@ -48,4 +48,6 @@ uploads/* -tabspace
 #tmp/* -trimWhitespace
 #uploads/* -trimWhitespace
 
+* filter=stripWhitespace
+
 

@@ -6,7 +6,8 @@ clean = expand --tabs=4 --initial
 [merge]
     renormalize = true
 #filter.trimWhitespace.clean trim_whitespace
-[core]
-    whitespace = trailing-space
-[apply]
-    whitespace = fix
+#[core]
+#    whitespace = trailing-space
+#[apply]
+#    whitespace = fix
+filter.stripWhitespace.clean strip_whitespace
