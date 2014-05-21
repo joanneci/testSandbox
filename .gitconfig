@@ -10,4 +10,3 @@ clean = expand --tabs=4 --initial
 #    whitespace = trailing-space
 #[apply]
 #    whitespace = fix
-filter.stripWhitespace.clean strip_whitespace

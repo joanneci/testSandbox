@@ -5,27 +5,28 @@
  *
  * http://highfidelity.io
  */                              
-	//hello world!
-	//hello again!        
+    //hello world!
+    //hello again! 
+    //hi              
 class ForgotController extends Controller {   
     public function run () {
         // @TODO: We extra the request but it seems we then don't use it?                                         
       //trailing above  
-		//2tabs
-	//1tab                      
+        //2tabs
+    //1tab                      
     //spaces
-	//this is a new tab
+    //this is a new tab
     //4spaces                 
-	//tab	
+    //tab	
     
-	//newtab                                                             
-	//newnew                           
-	//hi                      
+    //newtab                                                             
+    //newnew                           
+    //hi                      
     //new new ew test     
-	//after copy         
+    //after copy         
     
-			// iiiii          
-    	//this is a tab           
+            // iiiii          
+        //this is a tab           
     //this has trailing whitespaces                   
 //this is a very long line kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk lllllllllllllllllllllllllllllllllllllllllllllllll bbbbbbbbbbbbbbbbbbbbbbbbbbbbb       
         extract($_REQUEST);
@@ -33,7 +34,7 @@ class ForgotController extends Controller {
         $msg = '';                          
         if(!empty($_POST['username'])) {                     
             
-	$token = md5(uniqid()); //tabs     and whitespaces                       
+    $token = md5(uniqid()); //tabs     and whitespaces                       
             $user = new User();                       
             if ($user->findUserByUsername($_POST['username'])) {
                 $user->setForgot_hash($token);
@@ -45,34 +46,34 @@ class ForgotController extends Controller {
             } else {       
                 $msg = '<p class="LV_invalid">Sorry, unable to send password reset information. Try again or contact an administrator.</p>';
             }
-	//newtab                     
-		//k     
-	//4444444  
+    //newtab                     
+        //k     
+    //4444444  
 //j
 //m one tsssssssssssssssssswo tccccpplllllllllllppppppppppccccccccccccccccchree me me abc def ghi kkk lll mmm nnn ooo ppppppppppppppppp qqqqqqqqqqqqqqqqqq rrrrrrrrrrrrrrrrrrrrrssssssssssssssssss
 //try this               
 //y
-	//z
-	//99999	
+    //z
+    //99999	
 //aa bb cc dddddddddddddddddddddddddddddd eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee ffffffffffffffffffffffffffffffff gggggggggggggggggggggggggggg hhhhhhhhhhhhhhhhhhhhhhh llllllllll
 //bbq   
 //cc mmmmmmmmmmm123456789mmmmmmmm nnnnnnnnnnnnnnnnnnnnnnnnn ooooooooooooooooooooooooooooooooo pppppppppppppppppppppppppp qqqqqqqqkokokkoqqqqqqqqqqqqqppppppppppppppppppppppppppp                                           
             //
-	//back to atts
+    //back to atts
     //these are indent spaces
-	//this is a new tab with trailing spaces 
-		//config ch
+    //this is a new tab with trailing spaces 
+        //config ch
 
 
 
                                    
         } 
         //hmmm 
-	//no gs                 
+    //no gs                 
         $this->write('msg', $msg);                                 
         parent::run(); //jrrrrrrrrrrrrrrrrrrrrrrrjjjjjjjjjjjjjjjjooooooooooooooooojjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-        	//new line tabbed                                                          
+            //new line tabbed                                                          
         
-        	//tried some changes in the config file
+            //tried some changes in the config file
     }
 }
