@@ -26,7 +26,7 @@ found_offenses=''
  
 for file in $changed_source_files ; do
 too_long=`git diff-index --cached -p $against -- ${file} |
-egrep '^\+.{161,}' | sed -E 's/^\+//'`
+egrep '^\+.{121,}' | sed -E 's/^\+//'`
 if [[ -n "$too_long" ]]; then
 found_offenses=YES
 printf "\n$file:\n%s\n" "$too_long" >&2
