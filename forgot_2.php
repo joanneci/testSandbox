@@ -8,7 +8,7 @@
     //hello world!
     //hello again! 
     //hi              
-class ForgotController extends Controller {   
+class ForgotController extends Controller {     
     public function run () {
         // @TODO: We extra the request but it seems we then don't use it?                                         
       //trailing above  
