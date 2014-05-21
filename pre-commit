@@ -16,25 +16,3 @@ else
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
 
-# Detect too long lines in .php and .html files:
-changed_source_files=`git diff-index --cached $against --numstat |
-cut -f3 |
-egrep '\.[]$'`
- 
-if [[ -n "$changed_source_files" ]]; then
-found_offenses=''
- 
-for file in $changed_source_files ; do
-too_long=`git diff-index --cached -p $against -- ${file} |
-egrep '^\+.{121,}' | sed -E 's/^\+//'`
-if [[ -n "$too_long" ]]; then
-found_offenses=YES
-printf "\n$file:\n%s\n" "$too_long" >&2
-fi
-done
- 
-if [[ -n $found_offenses ]]; then
-echo "\nAborting commit because you added lines longer than 116 chars." >&2
-exit 1
-fi
-fi
