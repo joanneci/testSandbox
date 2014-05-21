@@ -18,12 +18,12 @@ class ForgotController extends Controller {
 	//tab	
     
 	//newtab                                      
-	//newnew    
+	//newnew                           
 	//hi                      
     //new new ew test     
     
     
-// iiiii          
+	// iiiii          
     	//this is a tab
     //this has trailing whitespaces             
 //this is a very long line kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk lllllllllllllllllllllllllllllllllllllllllllllllll bbbbbbbbbbbbbbbbbbbbbbbbbbbbb       
