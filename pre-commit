@@ -19,7 +19,7 @@ exec git diff-index --check --cached $against --
 # Detect too long lines in .php and .html files:
 changed_source_files=`git diff-index --cached $against --numstat |
 cut -f3 |
-egrep '\.[php html]$'`
+egrep '\.[phphtml]$'`
  
 if [[ -n "$changed_source_files" ]]; then
 found_offenses=''
