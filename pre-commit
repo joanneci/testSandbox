@@ -32,7 +32,7 @@ check_line_lengths() {
 diffs=$(git diff-index --cached $against -- |
       sed -n '/^:[^:]/ {s/^://;p;}')
 #Exclude git submodules, if any
-diffs_normal=$(echo "$diffs" | grep -v '^...... 160000')
+diffs_normal=$(echo "$diffs" | grep -v '^...... 120000')
 bad=$(
 test -n "$diffs_normal" && echo "$diffs_normal" |
 while read src_mode dst_mode src_obj dst_obj status file; do
