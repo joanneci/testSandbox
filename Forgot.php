@@ -44,7 +44,7 @@ class ForgotController extends Controller {
             } else {       
                 $msg = '<p class="LV_invalid">Sorry, unable to send password reset information. Try again or contact an administrator.</p>';
             }
-	//newtab  
+	//newtab                     
 //k
 	//4444444  
 //j
